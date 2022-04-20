@@ -1,0 +1,153 @@
+<div class="modal-dialog modal-xl">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLabel">Alerts</h5>
+
+        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">X</button>
+
+      </div>
+
+      <div class="modal-body">
+
+          <div class="flex-display tabs">
+
+            <div>
+
+              <button  *ngFor="let tab of navTabs; let i = index;" [ngClass]="{ 'is-active': i === 0}">{{tab}}</button>
+
+            </div>
+
+          </div>
+
+          <div class="content flex-display">
+
+            <div class="left-box">
+
+                <div>
+
+                    <span class="icon">▰</span><span class="icon">Immunization Alerts</span>
+
+                </div>
+
+                <div class="search-bar">
+
+                    <label class="find">Find</label>
+
+                    <input type="text" [(ngModel)]="searchData">
+
+                    <button class="delete-btn" (click)="deleteSelected()">Delete</button>
+
+                </div>
+
+                <div class="scroll">
+
+                  <table>
+
+                    <thead>
+
+                        <tr>
+
+                          <th><input type="checkbox" (click)="selectAll($event)"></th>
+
+                          <th (click)="sort('name')">Name</th>
+
+                          <th (click)="sort('description')">Description</th>
+
+                          <th (click)="sort('webReference')">Web Reference</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr *ngFor="let item of tableData | searchFilter:searchData; let i = index">
+
+                          <td><input type="checkbox" (click)="selectID(item.id, $event)"></td>
+
+                          <td>{{item.name}}</td>
+
+                          <td>{{item.description}}</td>
+
+                          <td>{{item.webReference}}</td>
+
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+
+                </div>
+
+                <div class="paginate">
+
+                  pagination
+
+                </div>
+
+              </div>
+
+              <div class="right-box">
+
+                <form #myForm="ngForm" (ngSubmit)="myForm.form.valid && onSubmit()">
+
+                    <div>
+
+                      <div class="row">
+
+                        <div class="flex-display form-group">
+
+                            <label>Name</label>
+
+                            <input type="text" [ngClass]="{ 'is-invalid': myForm.submitted && name.invalid }" required [(ngModel)]="model.name" #name="ngModel" name="name" class="form-control" />
+
+                        </div>
+
+                        <div class="flex-display form-group">
+
+                            <label>Description</label>
+
+                            <input type="text" [ngClass]="{ 'is-invalid': myForm.submitted && description.invalid }" required [(ngModel)]="model.description" #description="ngModel" name="description" class="form-control" />
+
+                        </div>
+
+                        <div class="flex-display form-group">
+
+                            <label>Web Ref.</label>
+
+                            <input type="text" [ngClass]="{ 'is-invalid': myForm.submitted && webReference.invalid }" required [(ngModel)]="model.webReference" #webReference="ngModel" name="webReference" class="form-control" />
+
+                          </div>
+
+                      </div>
+
+                    </div>
+
+                    <button type="submit" class="add-btn" >
+
+                      Add
+
+                    </button>
+
+                  </form>
+
+                  <div class="form-footer">
+
+                    <button type="button" class="cancel-btn" data-bs-dismiss="modal">Cancel</button>
+
+                    <button type="button" class="ok-btn">OK</button>
+
+                  </div>
+
+              </div>
+
+          </div>  
+
+      </div>
+
+    </div>
+
+  </div>

@@ -1,0 +1,239 @@
+.modal-content {
+
+    margin: 30px !important;
+
+    background-color:  rgb(247, 249, 252);
+
+}
+
+.modal-header {
+
+    background-color: rgb(86, 86, 235);
+
+    height: 30px;
+
+}
+
+.modal-body {
+
+    padding: 0;
+
+}
+
+.close-btn {
+
+    color:white !important;
+
+    border-radius: 50%;
+
+    background-color: inherit !important;
+
+    border : 2px solid white !important;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+.flex-display {
+
+    display: flex;
+
+}
+
+.tabs {
+
+    justify-content: flex-end;
+
+    border-bottom: 2px solid rgb(75, 143, 221);
+
+    margin-top: 10px;
+
+}
+
+.tabs button {
+
+    background-color: rgb(75, 143, 221);
+
+    color: white;
+
+    border-radius: 0px !important;
+
+    border-top: 2px solid rgb(75, 143, 221) !important;
+
+    border-right: .5px solid rgb(145, 179, 189) !important;
+
+    margin-bottom: -10px !important;
+
+}
+
+.tabs div:last-child  {
+
+    padding-right: 10px !important;
+
+}
+
+.tabs button:last-child  {
+
+    border-top-right-radius: 4px !important;
+
+}
+
+.tabs button:first-child  {
+
+    border-top-left-radius: 4px !important;
+
+}
+
+.is-active {
+
+    color: rgb(75, 143, 221) !important;
+
+    background-color: rgb(247, 249, 252) !important;
+
+    border: 2px solid rgb(75, 143, 221) !important;
+
+    border-bottom : 2px solid rgb(247, 249, 252) !important;
+
+}
+
+.scroll{
+
+    overflow-y: auto;
+
+    height: 400px;
+
+}
+
+.scroll thead th {
+
+    position: sticky;
+
+    top: 0;
+
+}
+
+table {
+
+    border-collapse: collapse;        
+
+    width: 100%;
+
+}
+
+th {
+
+    background: #bdd6ee;
+
+}
+
+table, td, th {
+
+    border: 1px solid rgb(94, 93, 93);
+
+    padding: 10px;
+
+}
+
+.search-bar {
+
+    padding: 10px 0;
+
+}
+
+.find {
+
+    margin-right: 10px;
+
+}
+
+.delete-btn, .add-btn{
+
+    float: right;
+
+}
+
+.row label {
+
+    width: 150px;
+
+}
+
+.content {
+
+    width: 100%;
+
+    padding: 10px;
+
+}
+
+.left-box {
+
+    width: 60%;
+
+}
+
+.right-box {
+
+    width: 40%;
+
+    padding: 20px; margin-left: 10px;
+
+    border-left: 1px solid grey;
+
+}
+
+.form-group {
+
+    margin: 10px 0;
+
+}
+
+.right-box input {
+
+    width: 70%;
+
+    height: 30px;
+
+}
+
+.add-btn {
+
+    margin-top: 10px;
+
+}
+
+.ok-btn {
+
+    background-color:rgb(88, 193, 219);
+
+    margin-left: 10px;
+
+}
+
+.form-footer {
+
+    position: absolute;
+
+    right: 10px;
+
+    bottom: 10px;
+
+}
+
+.paginate {
+
+    height: 30px;
+
+    padding: 10px;
+
+}
+
+.icon {
+
+    color: rgb(75, 143, 221);
+
+    padding-right: 10px;
+
+}

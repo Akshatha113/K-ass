@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+    background-color: rgb(221, 214, 214);
+    border: 1px solid grey;
+    color: black;
+    border-radius: 3px;
+}
+
+input {
+    border-radius : 3px;
+    border: 1px solid grey;
+    color: black;
+}
